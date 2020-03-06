@@ -1,0 +1,68 @@
+// fr-sci
+// Autheur : Hadrien LEMAIRE
+// Date : 6 mars 2020
+//
+partial alphanumeric_keys
+xkb_symbols "fr-sci" {
+    include "level3(ralt_switch)"
+    include "nbsp(level4n)"
+    include "keypad(oss)"
+
+    name[Group1]="French (fr-sci)";
+
+    // First row
+    key <TLDE>	{ [      twosuperior,    threesuperior,          onesuperior,          dead_cedilla ] }; // ² ³ ¹ ¸ 
+    key <AE01>	{ [        ampersand,                1,             NoSymbol,              NoSymbol ] }; // & 1     
+    key <AE02>	{ [           eacute,                2,           asciitilde,              NoSymbol ] }; // é/É 2 ~ 
+    key <AE03>	{ [         quotedbl,                3,           numbersign,              NoSymbol ] }; // " 3 #   
+    key <AE04>	{ [       apostrophe,                4,            braceleft,             0x1002014 ] }; // ' 4 { — (tiret cadratin)      
+    key <AE05>	{ [        parenleft,                5,          bracketleft,             0x1002013 ] }; // ( 5 [ – (tiret demi-cadratin) 
+    key <AE06>	{ [            minus,                6,                  bar,             0x1002011 ] }; // - 6 | ‑ (tiret insécable)      
+    key <AE07>	{ [           egrave,                7,                grave,              NoSymbol ] }; // è/È 7 ` 
+    key <AE08>	{ [       underscore,                8,            backslash,              NoSymbol ] }; // _ 8 \   
+    key <AE09>	{ [         ccedilla,                9,          asciicircum,              NoSymbol ] }; // ç/Ç 9 ^ 
+    key <AE10>	{ [           agrave,                0,                   at,              notequal ] }; // à/À 0 @ ≠ 
+    key <AE11>	{ [       parenright,           degree,         bracketright,                 U2243 ] }; // ) ° ] ≃ 
+    key <AE12>	{ [            equal,             plus,           braceright,             plusminus ] }; // = + } ± 
+
+    // Second row
+    key <AD01>	{ [                a,                A,          Greek_alpha,           Greek_ALPHA ] }; // a A α Α  
+    key <AD02>	{ [                z,                Z,           Greek_zeta,            Greek_ZETA ] }; // z Z ζ Ζ  
+    key <AD03>	{ [                e,                E,        Greek_epsilon,         Greek_EPSILON ] }; // e E ε Ε  
+    key <AD04>	{ [                r,                R,            Greek_rho,             Greek_RHO ] }; // r R ρ Ρ  
+    key <AD05>	{ [                t,                T,            Greek_tau,             Greek_TAU ] }; // t T τ Τ  
+    key <AD06>	{ [                y,                Y,        Greek_upsilon,         Greek_UPSILON ] }; // y Y υ Υ  
+    key <AD07>	{ [                u,                U,             NoSymbol,              NoSymbol ] }; // u U      
+    key <AD08>	{ [                i,                I,            Greek_psi,             Greek_PSI ] }; // i I ψ Ψ  
+    key <AD09>	{ [                o,                O,          Greek_omega,           Greek_OMEGA ] }; // o O ω Ω  
+    key <AD10>	{ [                p,                P,             Greek_pi,              Greek_PI ] }; // p P π Π  
+    key <AD11>	{ [  dead_circumflex,   dead_diaeresis,           dead_grave,            dead_acute ] }; // ^ ̈  ` '  
+    key <AD12>	{ [           dollar,         sterling,               oslash,              Ooblique ] }; // $ £ ø Ø  
+
+    // Third row
+    key <AC01>	{ [                q,                Q,            Greek_chi,             Greek_CHI ] }; // q Q χ Χ  
+    key <AC02>	{ [                s,                S,          Greek_sigma,           Greek_SIGMA ] }; // s S σ Σ  
+    key <AC03>	{ [                d,                D,          Greek_delta,           Greek_DELTA ] }; // d D δ Δ  
+    key <AC04>	{ [                f,                F,            Greek_phi,             Greek_PHI ] }; // f F φ Φ  
+    key <AC05>	{ [                g,                G,          Greek_gamma,           Greek_GAMMA ] }; // g G γ Γ  
+    key <AC06>	{ [                h,                H,            Greek_eta,             Greek_ETA ] }; // h H η Η  
+    key <AC07>	{ [                j,                J,             NoSymbol,              NoSymbol ] }; // j J      
+    key <AC08>	{ [                k,                K,          Greek_kappa,           Greek_KAPPA ] }; // k K κ Κ  
+    key <AC09>	{ [                l,                L,          Greek_lamda,           Greek_LAMDA ] }; // l L λ Λ  
+    key <AC10>	{ [                m,                M,             Greek_mu,              Greek_MU ] }; // m M μ Μ  
+    key <AC11>	{ [           ugrave,          percent,                  oe ,                    OE ] }; // ù % œ Œ  
+    key <BKSL>	{ [         asterisk,               mu,             EuroSign,                   yen ] }; // * µ € ¥  
+
+    // Fourth row
+    key <LSGT>  { [             less,          greater,        lessthanequal,      greaterthanequal ] }; // < > ≤ ≥  
+    key <AB01>  { [                w,                W,        guillemotleft,        guillemotright ] }; // w W « »  
+    key <AB02>  { [                x,                X,             Greek_xi,              Greek_XI ] }; // x X ξ Ξ  
+    key <AB03>  { [                c,                C,          Greek_theta,           Greek_THETA ] }; // c C θ Θ  
+    key <AB04>  { [                v,                V,             NoSymbol,              NoSymbol ] }; // v V      
+    key <AB05>  { [                b,                B,           Greek_beta,            Greek_BETA ] }; // b B β Β  
+    key <AB06>  { [                n,                N,             Greek_nu,              Greek_NU ] }; // n N ν Ν  
+    key <AB07>  { [            comma,         question,            0x1002026,              NoSymbol ] }; // , ? …    
+    key <AB08>  { [        semicolon,           period,            0x10022C5,              NoSymbol ] }; // ; . ⋅         
+    key <AB09>  { [            colon,            slash,             division,              multiply ] }; // : / ÷ ×  
+    key <AB10>  { [           exclam,          section,                U2202,              NoSymbol ] }; // ! § ∂    
+};
