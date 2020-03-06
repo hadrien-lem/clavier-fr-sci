@@ -3,13 +3,13 @@
 ## Description
 Configuration d'un clavier azerty. La principale différence est l'ajout des lettres grecques.
 
-![Disposition clavier](https://github.com/hadrien-lem/clavier-fr-sci/keyboard-layout.png)
+![Disposition clavier](https://github.com/hadrien-lem/clavier-fr-sci/blob/master/keyboard-layout.png)
 
 ## Installation
 Pour Linux via xkb.
 
-* Ajouter le contenu de `fr-sci.txt` à la fin de `/usr/share/X11/xkb/symbols/fr`
-* Ajouter le code ci-dessous à l'intérieur de `/usr/share/X11/skb/rules/evdev.xml`
+* Ajouter le contenu de `fr-sci.txt` à la fin de `/usr/share/X11/xkb/symbols/fr` ;
+* Ajouter le code ci-dessous à l'intérieur de `/usr/share/X11/skb/rules/evdev.xml` ;
 ```xml
 <variant>
   <configItem>
@@ -18,8 +18,8 @@ Pour Linux via xkb.
   </configItem>
 </variant>
 ```
-* Se déconnecter/redémarrer
-* Changer la configuration clavier dans les paramètres
+* Se déconnecter/redémarrer ;
+* Changer la configuration clavier dans les paramètres.
 
 
-Testé sur Arch Gnome-Wayland
+Testé sur Arch Gnome-Wayland.
