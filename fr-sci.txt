@@ -33,7 +33,7 @@ xkb_symbols "fr-sci" {
     key <AD05>	{ [                t,                T,            Greek_tau,             Greek_TAU ] }; // t T τ Τ  
     key <AD06>	{ [                y,                Y,        Greek_upsilon,         Greek_UPSILON ] }; // y Y υ Υ  
     key <AD07>	{ [                u,                U,             NoSymbol,              NoSymbol ] }; // u U      
-    key <AD08>	{ [                i,                I,            Greek_psi,             Greek_PSI ] }; // i I ψ Ψ  
+    key <AD08>	{ [                i,                I,           Greek_iota,            Greek_IOTA ] }; // i I ι Ι 
     key <AD09>	{ [                o,                O,          Greek_omega,           Greek_OMEGA ] }; // o O ω Ω  
     key <AD10>	{ [                p,                P,             Greek_pi,              Greek_PI ] }; // p P π Π  
     key <AD11>	{ [  dead_circumflex,   dead_diaeresis,           dead_grave,            dead_acute ] }; // ^ ̈  ` '  
@@ -58,7 +58,7 @@ xkb_symbols "fr-sci" {
     key <AB01>  { [                w,                W,        guillemotleft,        guillemotright ] }; // w W « »  
     key <AB02>  { [                x,                X,             Greek_xi,              Greek_XI ] }; // x X ξ Ξ  
     key <AB03>  { [                c,                C,          Greek_theta,           Greek_THETA ] }; // c C θ Θ  
-    key <AB04>  { [                v,                V,             NoSymbol,              NoSymbol ] }; // v V      
+    key <AB04>  { [                v,                V,            Greek_psi,             Greek_PSI ] }; // v V ψ Ψ  
     key <AB05>  { [                b,                B,           Greek_beta,            Greek_BETA ] }; // b B β Β  
     key <AB06>  { [                n,                N,             Greek_nu,              Greek_NU ] }; // n N ν Ν  
     key <AB07>  { [            comma,         question,            0x1002026,              NoSymbol ] }; // , ? …    
