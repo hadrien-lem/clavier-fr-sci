@@ -4,6 +4,7 @@
 Configuration d'un clavier azerty. La principale différence est l'ajout des lettres grecques.
 
 ![Disposition clavier](https://github.com/hadrien-lem/clavier-fr-sci/blob/master/keyboard-layout.png)
+Le fichier `keyboard-layout.json` est à utiliser sur http://www.keyboard-layout-editor.com/
 
 ## Installation
 Pour Linux via xkb.
