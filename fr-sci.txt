@@ -12,7 +12,7 @@ xkb_symbols "fr-sci" {
 
     // First row
     key <TLDE>	{ [      twosuperior,    threesuperior,          onesuperior,          dead_cedilla ] }; // ² ³ ¹ ¸ 
-    key <AE01>	{ [        ampersand,                1,             NoSymbol,              NoSymbol ] }; // & 1     
+    key <AE01>	{ [        ampersand,                1,                U21D0,                 U21D2 ] }; // & 1 ⇐ ⇒   
     key <AE02>	{ [           eacute,                2,           asciitilde,              NoSymbol ] }; // é/É 2 ~ 
     key <AE03>	{ [         quotedbl,                3,           numbersign,              NoSymbol ] }; // " 3 #   
     key <AE04>	{ [       apostrophe,                4,            braceleft,             0x1002014 ] }; // ' 4 { — (tiret cadratin)      
@@ -64,5 +64,5 @@ xkb_symbols "fr-sci" {
     key <AB07>  { [            comma,         question,            0x1002026,              NoSymbol ] }; // , ? …    
     key <AB08>  { [        semicolon,           period,            0x10022C5,              NoSymbol ] }; // ; . ⋅         
     key <AB09>  { [            colon,            slash,             division,              multiply ] }; // : / ÷ ×  
-    key <AB10>  { [           exclam,          section,                U2202,              NoSymbol ] }; // ! § ∂    
+    key <AB10>  { [           exclam,          section,                U2202,                 U21D4 ] }; // ! § ∂ ⇔   
 };
