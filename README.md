@@ -10,8 +10,8 @@ Le fichier `keyboard-layout.json` est à utiliser sur http://www.keyboard-layout
 ## Installation
 Pour Linux via xkb :
 
-* Ajouter le contenu de `fr-sci.txt` à la fin de `/usr/share/X11/xkb/symbols/fr` ;
-* Ajouter le code ci-dessous à l'intérieur de `/usr/share/X11/skb/rules/evdev.xml` ;
+* Ajouter le contenu de `fr-sci.txt` à la fin de `/usr/share/X11/xkb/symbols/fr`
+* Ajouter le code ci-dessous à l'intérieur de `/usr/share/X11/xkb/rules/evdev.xml` dans la section souhaitée
 ```xml
 <variant>
   <configItem>
@@ -20,8 +20,8 @@ Pour Linux via xkb :
   </configItem>
 </variant>
 ```
-* Se déconnecter/redémarrer ;
-* Changer la configuration clavier dans les paramètres.
+* Se déconnecter/redémarrer
+* Changer la configuration clavier dans les paramètres
 
 
 Testé sur Arch Gnome-Wayland.
