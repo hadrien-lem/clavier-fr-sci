@@ -1,7 +1,7 @@
 # Clavier fr-sci
 
 ## Description
-Configuration d'un clavier azerty. La principale différence est l'ajout des lettres grecques.
+Configuration d'un clavier azerty. La principale différence est l'ajout des lettres grecques et de quelques caractères mathématiques.
 
 ![Disposition clavier](https://github.com/hadrien-lem/clavier-fr-sci/blob/master/keyboard-layout.png)
 
@@ -10,18 +10,7 @@ Le fichier `keyboard-layout.json` est à utiliser sur http://www.keyboard-layout
 ## Installation
 Pour Linux via xkb :
 
-* Ajouter le contenu de `fr-sci.txt` à la fin de `/usr/share/X11/xkb/symbols/fr`
-* Ajouter le code ci-dessous à l'intérieur de `/usr/share/X11/xkb/rules/evdev.xml` dans la section souhaitée
-```xml
-<variant>
-  <configItem>
-    <name>fr-sci</name>
-    <description>French (fr-sci)</description>
-  </configItem>
-</variant>
-```
-* Se déconnecter/redémarrer
-* Changer la configuration clavier dans les paramètres
+* Exécuter le script `install`
+* Ajouter `setxkbmap -layout fr -variant fr_sci` dans `.xinitrc`. 
 
-
-Testé sur Arch Gnome-Wayland.
+Testé sur Arch.

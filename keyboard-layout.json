@@ -45,7 +45,7 @@
       "t": "#000000",
       "w": 2.25
     },
-    "Backspace"
+    "Arrière"
   ],
   [
     {
@@ -58,18 +58,12 @@
     "A\na\n&Alpha;\n&alpha;",
     "Z\nz\n&Zeta;\n&zeta;",
     "E\ne\n&Epsilon;\n&epsilon;",
-    "R\nr\n&Pi;\n&pi;",
+    "R\nr\n&Rho;\n&rho;",
     "T\nt\n&Tau;\n&tau;",
     "Y\ny\n&Upsilon;\n&upsilon;",
-    {
-      "t": "#000000"
-    },
-    "U\nu",
-    {
-      "t": "#000000\n\n#ff7d7d\n#ff0000"
-    },
+    "U\nu\n&Theta;\n&theta;",
     "I\ni\n&Iota;\n&iota;",
-    "O\no\n&Omega;\n&omega;",
+    "O\no\n&Omicron;\n&omicron;",
     "P\np\n&Pi;\n&pi;",
     {
       "t": "#919191\n#000000\n#ff7d7d\n#ff0000"
@@ -85,29 +79,23 @@
       "h2": 1,
       "x2": -0.25
     },
-    "Enter"
+    "Entrée"
   ],
   [
     {
       "w": 1.75
     },
-    "Caps Lock",
+    "Verr Maj",
     {
       "t": "#000000\n\n#ff7d7d\n#ff0000"
     },
-    "Q\nq\n&Chi;\n&chi;",
+    "Q\nq",
     "S\ns\n&Sigma;\n&sigma;",
     "D\nd\n&Delta;\n&delta;",
     "F\nf\n&Phi;\n&phi;",
     "G\ng\n&Gamma;\n&gamma;",
     "H\nh\n&Eta;\n&eta;",
-    {
-      "t": "#000000"
-    },
-    "J\nj",
-    {
-      "t": "#000000\n\n#ff7d7d\n#ff0000"
-    },
+    "J\nj\n&Xi;\n&xi;",
     "K\nk\n&Kappa;\n&kappa;",
     "L\nl\n&Lambda;\n&lambda;",
     "M\nm\n&Mu;\n&mu;",
@@ -124,7 +112,7 @@
     {
       "t": "#000000"
     },
-    "Shift",
+    "Maj",
     {
       "t": "#919191\n#000000\n#ff7d7d\n#ff0000"
     },
@@ -133,9 +121,9 @@
       "t": "#000000\n\n#ff7d7d\n#ff0000"
     },
     "W\nw\n&raquo;\n&laquo;",
-    "X\nx\n&Xi;\n&xi;",
-    "C\nc\n&Theta;\n&theta;",
-    "V\nv\n&Psi;\n&psi;",
+    "X\nx\n&Chi;\n&chi;",
+    "C\nc\n&Psi;\n&psi;",
+    "V\nv\n&Omega;\n&omega;",
     "B\nb\n&Beta;\n&beta;",
     "N\nn\n&Nu;\n&nu;",
     {
@@ -152,18 +140,12 @@
       "t": "#000000",
       "w": 3
     },
-    "Shift"
+    "Maj"
   ],
   [
     "Ctrl",
-    {
-      "a": 7
-    },
     "fn",
-    {
-      "a": 4
-    },
-    "Win",
+    "Os",
     "Alt",
     {
       "a": 7,
@@ -174,13 +156,7 @@
       "a": 4
     },
     "AltGr",
-    {
-      "a": 7
-    },
-    "",
-    {
-      "a": 4
-    },
+    "Os",
     "Ctrl",
     {
       "x": 1,

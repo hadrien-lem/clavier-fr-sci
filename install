@@ -1,0 +1,64 @@
+#!/bin/bash
+
+
+function install () {
+	sudo cat fr_sci.txt >> /usr/share/X11/xkb/symbols/fr
+}
+
+function remove () {
+	if grep -q START\ fr_sci /usr/share/X11/xkb/symbols/fr && grep -q END\ fr_sci /usr/share/X11/xkb/symbols/fr
+	then
+		f=$(grep -n -m 1 //\ START\ fr_sci /usr/share/X11/xkb/symbols/fr | cut -d : -f 1)
+		e=$(grep -n //\ END\ fr_sci /usr/share/X11/xkb/symbols/fr | tail -1 | cut -d : -f 1)
+		echo -e "/usr/share/X11/xkb/symbols/fr : Lignes de ${f} à ${e} supprimées."
+		sudo sed -i ${f},${e}d /usr/share/X11/xkb/symbols/fr 
+	else
+		echo -e "La configuration dans /usr/share/X11/xkb/symbols/fr n'a pas été trouvé."
+	fi
+}
+
+function append_to_evdev () {
+	if ! grep -q fr_sci /usr/share/X11/xkb/rules/evdev.lst ; then
+		sudo sed -i '/fr: French (US)/a   fr_sci          fr: French (fr_sci)' /usr/share/X11/xkb/rules/evdev.lst
+		echo -e "/usr/share/X11/xkb/rules/evdev.lst : Configuration ajouté."
+	fi
+
+	if ! grep -q fr_sci /usr/share/X11/xkb/rules/evdev.xml ; then
+		xml='<variant>\n<configItem>\n<name>fr_sci</name>\n<description>French (fr_sci)</description>\n</configItem>\n</variant>'
+		n=$(grep -n -m 1 French\ \(US\) /usr/share/X11/xkb/rules/evdev.xml | cut -d : -f 1)
+		n=$((n+2))
+		sudo sed -i ${n}a\ "${xml}" /usr/share/X11/xkb/rules/evdev.xml 
+		echo -e "/usr/share/X11/xkb/rules/evdev.xml : Configuration ajouté."
+	fi	
+}
+
+function set_bak () {
+	if [ ! -f /usr/share/X11/xkb/rules/evdev.lst.bak ]; then
+		sudo cp /usr/share/X11/xkb/rules/evdev.lst /usr/share/X11/xkb/rules/evdev.lst.bak 
+	fi
+	if [ ! -f /usr/share/X11/xkb/rules/evdev.xml.bak ]; then
+		sudo cp /usr/share/X11/xkb/rules/evdev.xml /usr/share/X11/xkb/rules/evdev.xml.bak 
+	fi
+	if [ ! -f /usr/share/X11/xkb/symbols/fr.bak ]; then
+		sudo cp /usr/share/X11/xkb/symbols/fr /usr/share/X11/xkb/symbols/fr.bak 
+	fi
+}
+
+
+set_bak
+
+if grep -c fr_sci /usr/share/X11/xkb/symbols/fr
+then
+	echo 'Désinstallation de la version précédente'
+	remove
+	echo 'Installation'
+	install
+	append_to_evdev
+	echo 'Installé'
+else
+	echo 'Installation'
+	install
+	append_to_evdev
+	echo 'Installé'
+fi
+
